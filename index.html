@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semstreams — Stream Processing for the Real World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="360 logo round 50.png" alt="C360 Studio" />
+    <span>semstreams<em>.alpha</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="https://github.com/C360Studio/semstreams" target="_blank">GitHub &#8599;</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-product">Semstreams</div>
+    <div class="hero-tag">Alpha Release</div>
+    <h1>Streams in.<br/><em>Knowledge out.</em></h1>
+    <p class="hero-sub">A Go framework for building streaming pipelines that produce live semantic knowledge graphs. For environments where connectivity is intermittent, compute is finite, and the environment will not cooperate.</p>
+    <div class="hero-actions">
+      <a href="https://github.com/C360Studio/semstreams/tree/main/docs" target="_blank" class="btn-primary">Get Started &#8594;</a>
+      <a href="https://github.com/C360Studio/semstreams" target="_blank" class="btn-ghost">View on GitHub</a>
+    </div>
+    <div class="install-strip">
+      <span class="install-label">Install</span>
+      <code>go get github.com/C360Studio/semstreams</code>
+    </div>
+  </div>
+</section>
+
+<section class="truth-section">
+  <div class="truth-grid">
+    <div class="truth-left">
+      <div class="section-label">// The Problem</div>
+      <h2>Comms suck.<br/>Design accordingly.</h2>
+      <p>Current AI infrastructure assumes always-on connectivity, abundant compute, rich model access, and an enormous token budget. What we call <strong>ambient affluence</strong>.</p>
+      <p>Thirty years of experience has taught us that these idealistic conditions rarely hold. Even if you have the budget, operational reality often has other plans. So if the environment will not cooperate, the architecture should embrace that reality from the start.</p>
+      <a href="blog.html" class="btn-ghost" style="display:inline-flex;margin-top:1rem;">Read "Comms Suck" &#8594;</a>
+    </div>
+    <div class="truth-right">
+      <div class="truth-item"><div class="truth-item-label">Offline first</div><p>The graph holds locally and syncs when the link comes back. You don't lose state when you lose the network.</p></div>
+      <div class="truth-item"><div class="truth-item-label">Model unavailable</div><p>Rules and workflows keep running. The system degrades through tiers — not off a cliff.</p></div>
+      <div class="truth-item"><div class="truth-item-label">Vocabulary mismatch</div><p>Structural relationships still function. You bring what you have; the system meets you there.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="principles-section">
+  <div class="principles-inner">
+    <div class="section-label">// Design Principles</div>
+    <h2>What this is built around.</h2>
+    <div class="principles-grid">
+      <div class="principle"><div class="principle-icon">&#8853;</div><h3>Graceful Degradation</h3><p>Start with what works offline. Add intelligence when you can afford it and when the problem demands it. Each tier is genuinely independent — you don't lose everything when you lose something.</p></div>
+      <div class="principle"><div class="principle-icon">&#9670;</div><h3>Composable by Default</h3><p>Dotted notation internally. Interop at the boundaries. Take or leave what you need — no prescribed ontology required on day one. The system meets you where you are.</p></div>
+      <div class="principle"><div class="principle-icon">&#9651;</div><h3>Observable Decisions</h3><p>Full trajectory capture. An agent that can explain what it did and why isn't just more trustworthy — it's actually useful when auditability isn't optional.</p></div>
+      <div class="principle"><div class="principle-icon">&#9633;</div><h3>Cost-Aware by Design</h3><p>The model registry lets you configure models by capability — right-size inference to the task. Agentic components are built for efficient token use and managed context. Spend where the problem demands it, not everywhere by default.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-section">
+    <div class="section-label">// Alpha</div>
+    <h2>Early. Honest.<br/>Come break it.</h2>
+    <p>The documentation reflects where we are, not where we're going. If your requirements are clearer in production than they were on paper — this was built for you.</p>
+    <div class="cta-actions">
+      <a href="https://github.com/C360Studio/semstreams/tree/main/docs" target="_blank" class="btn-primary">Docs on GitHub &#8599;</a>
+      <a href="https://github.com/C360Studio/semstreams" target="_blank" class="btn-ghost">GitHub &#8599;</a>
+    </div>
+    <p class="alpha-note">Breaking changes will happen. That's the deal.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">
+    <img src="360 logo round 50.png" alt="C360" />
+    <span>semstreams &mdash; C360 Studio</span>
+  </div>
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://github.com/C360Studio/semstreams" target="_blank">GitHub</a>
+  </nav>
+</footer>
+</body>
+</html>

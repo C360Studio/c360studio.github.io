@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comms Suck — C360 Studio</title>
+  <meta name="description" content="Current AI infrastructure assumes ambient affluence. Thirty years in the field taught a different lesson." />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+
+<nav>
+  <a href="../../index.html" class="nav-logo">
+    <img src="../../360 logo round 50.png" alt="C360 Studio" />
+    <span>semstreams<em>.alpha</em></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="../../blog.html" class="active">Blog</a></li>
+    <li><a href="https://github.com/C360Studio/semstreams" target="_blank">GitHub &#8599;</a></li>
+  </ul>
+</nav>
+
+<div class="article-back">
+  <a href="../../blog.html" class="back-link">&#8592; All Posts</a>
+</div>
+
+<div class="article-content">
+  <div class="article-meta">
+    <span class="post-date">March 2026</span>
+    <span class="post-tag">semstreams</span>
+    <span class="post-tag">origin</span>
+    <span class="post-tag">field notes</span>
+  </div>
+
+  <h1>Comms Suck</h1>
+
+  <div class="article-body">
+    <p>Comms suck. Anyone who has operated in the real world learns that mantra on the first day.</p>
+    <p>But experience shows there are layers. And nuance.</p>
+    <p>When I started, &ldquo;comms suck&rdquo; meant radios didn&rsquo;t work. About the time we invented the wheel, I think. Later, we were convinced that IP networks would change everything &mdash; like having bunk beds instead of cots. So much more productive.</p>
+    <p>Turns out if two orgs didn&rsquo;t like talking to each other on the radios &mdash; regardless of whether there was a hill in the way &mdash; data networks don&rsquo;t help much either. So while we like to blame the geeks for our technical woes in the field, &ldquo;comms suck&rdquo; is often not a technical problem at all.</p>
+    <p>Took me too long to figure that out.</p>
+    <p>I don&rsquo;t have all the answers. But Semstreams was designed to embrace as much of the technical, cultural, political, and economic factors as I could &mdash; because the problem was never just the pipes.</p>
+    <hr />
+    <p>The irony is that the technology we built to fix the problem made the same assumption we had always made &mdash; that conditions would cooperate. Current AI infrastructure is the latest version of that: always-on connectivity, abundant compute, enormous token budgets. <strong>Ambient affluence</strong>. And when it works, it works great. But it was not designed for the hill in the way.</p>
+    <hr />
+    <p>Turns out I have to give credit to the Air Force for something useful.</p>
+    <p>OODA was designed to work when the hill is in the way. Observe, Orient, Decide, Act &mdash; a decision loop built for fast-moving, high-uncertainty environments. I kept recognizing it in what I was already building, because it works really well when conditions will not cooperate.</p>
+    <p>What each stage actually means when the environment degrades:</p>
+    <p><strong>Observe</strong> means you capture everything locally, because you do not know when you will have a chance to sync. The graph is your record. Not the log.</p>
+    <p><strong>Orient</strong> means you maintain typed relationships, not a flat event stream &mdash; because a log is useless without context. And orientation breaks when systems do not share vocabulary. Semstreams handles this pragmatically. Dotted notation internally &mdash; typed relationships, consistent identifiers, a vocabulary system that gives the graph coherent structure. At the boundaries, you bring what you have. The system meets you there. You do not have to adopt a prescribed ontology to get value from day one. You take what you need and leave what you do not.</p>
+    <p><strong>Decide</strong> means deterministic rules run first, before you invoke judgment &mdash; because deterministic is cheaper and auditable.</p>
+    <p><strong>Act</strong> means the loop closes &mdash; and then starts again. The tier progression maps to escalating trust in the environment. Start with what works offline. Add intelligence when you can afford it.</p>
+    <hr />
+    <p>Semstreams is what that philosophy looks like as a framework.</p>
+    <p>Streaming data turns into a live knowledge graph. Rules evaluate continuously. When rules are not enough, workflows orchestrate. When workflows need judgment, agents reason. Each layer earns its place. None of them are required until the problem demands them.</p>
+    <p>And when things go wrong &mdash; because they will &mdash; the system degrades through the tiers rather than off a cliff. Connectivity fails: the graph holds locally and syncs when the link comes back. The LLM is unavailable: rules and workflows keep running. Vocabulary is incomplete &mdash; because it always is when two systems meet. Structural relationships still function. The system doesn't wait for perfect agreement to start working. Each layer is genuinely independent. You do not lose everything when you lose something.</p>
+    <p>That is not an accident. That is the design principle.</p>
+    <hr />
+    <p>This is an alpha release. Breaking changes will happen. The documentation reflects where we are, not where we are going. I am releasing it now because the people who need it do not need it to be finished &mdash; they need it to be honest. If your requirements are clearer in production than they were on paper &mdash; this was built for you.</p>
+    <p>If you have watched an agent confidently do the wrong thing with no record of how it got there, the next piece of this is for you too.</p>
+    <hr />
+    <p>Thirty years of watching systems struggle at the seams taught me one thing: the environment will not cooperate. Design accordingly.</p>
+    <p>Semstreams is open source and available now. It is early. Come break it.</p>
+
+    <div class="article-footer">
+      <a href="https://github.com/C360Studio/semstreams" target="_blank">github.com/C360Studio/semstreams &#8599;</a>
+      <span style="font-family:var(--font-mono);font-size:.75rem;color:var(--text-dim);">March 2026</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">
+    <img src="../../360 logo round 50.png" alt="C360" />
+    <span>semstreams &mdash; C360 Studio</span>
+  </div>
+  <nav class="footer-links">
+    <a href="../../index.html">Home</a>
+    <a href="../../blog.html">Blog</a>
+    <a href="https://github.com/C360Studio/semstreams" target="_blank">GitHub</a>
+  </nav>
+</footer>
+
+</body>
+</html>
