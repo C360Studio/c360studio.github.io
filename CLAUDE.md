@@ -14,14 +14,14 @@ This is a plain HTML/CSS static site with no build step, no bundler, no framewor
 
 - `index.html` — Landing page for Semstreams
 - `blog.html` — Blog listing page
-- `docs/posts/*.html` — Individual blog post pages (e.g., `comms-suck.html`)
+- `posts/*.html` — Individual blog post pages (e.g., `comms-suck.html`)
 - `styles.css` — Shared stylesheet (all pages link to this)
 - `360 logo round {50,75,100}.png` — Logo assets at different sizes
 
 ### Navigation and Linking
 
 - Root pages (`index.html`, `blog.html`) link to `styles.css` and assets directly
-- Blog posts in `docs/posts/` use `../../` prefixed paths to reach root assets, stylesheets, and pages
+- Blog posts in `posts/` use `../` prefixed paths to reach root assets, stylesheets, and pages
 - External links point to `github.com/C360Studio/semstreams`
 
 ## Development
@@ -43,6 +43,6 @@ All styles live in `styles.css`, using CSS custom properties in `:root`:
 
 ## Conventions
 
-- Blog posts are added by creating a new HTML file in `docs/posts/` and adding a post card entry in `blog.html`
+- Blog posts are added by creating a new HTML file in `posts/` and adding a post card entry in `blog.html`
 - The nav and footer markup are duplicated across all pages and must be kept in sync manually
 - All CSS changes go in `styles.css` — no inline styles in HTML (except minor one-off overrides)

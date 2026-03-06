@@ -32,7 +32,7 @@ body {
 }
 
 /* ===== Nav ===== */
-nav {
+body > nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0.85rem 2.5rem;
@@ -46,10 +46,35 @@ nav {
 .nav-logo em { font-style: normal; color: var(--orange); }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a {
-  font-family: var(--font-mono); font-size: .8rem; color: var(--text-dim);
+  font-family: var(--font-mono); font-size: .8rem; color: var(--text);
   text-decoration: none; letter-spacing: .08em; text-transform: uppercase; transition: color .2s;
 }
 .nav-links a:hover, .nav-links a.active { color: var(--orange); }
+.gh-icon { display: inline-block; width: .85em; height: .85em; vertical-align: -0.1em; margin-right: .3em; }
+.gh-icon path { fill: currentColor; }
+
+/* Nav Dropdown */
+.nav-dropdown { position: relative; }
+.nav-dropdown > a::after { content: ' ▾'; font-size: .6rem; }
+.dropdown-menu {
+  display: none; position: absolute; top: 100%; left: 0;
+  background: var(--bg-2); border: 1px solid var(--border);
+  list-style: none; min-width: 180px; padding: .5rem 0;
+  padding-top: 1rem; border-radius: 2px; z-index: 200;
+}
+.nav-dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu li a, .dropdown-menu li .coming-soon {
+  display: block; padding: .5rem 1.25rem;
+  font-family: var(--font-mono); font-size: .78rem; color: var(--text);
+  text-decoration: none; letter-spacing: .06em; white-space: nowrap; transition: color .2s;
+  text-transform: none;
+}
+.dropdown-menu li a:hover { color: var(--orange); background: var(--bg-3); }
+.dropdown-menu .coming-soon { color: var(--text-dim); cursor: default; }
+.dropdown-menu .coming-soon em {
+  font-style: normal; font-size: .65rem; color: var(--green);
+  margin-left: .5rem; border: 1px solid var(--green); padding: .1rem .35rem; border-radius: 2px;
+}
 
 /* ===== Typography ===== */
 h1 {

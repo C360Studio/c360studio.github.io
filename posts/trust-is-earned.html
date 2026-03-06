@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trust is Earned — C360 Studio</title>
+  <meta name="description" content="Introducing semdragon — agentic workflow coordination built on semstreams." />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../360 logo round 50.png" />
+  <link rel="stylesheet" href="../styles.css?v=2" />
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <img src="../360 logo round 50.png" alt="C360 Studio" />
+    <span>C360 Studio</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li class="nav-dropdown">
+      <a href="#">Projects</a>
+      <ul class="dropdown-menu">
+        <li><a href="https://github.com/C360Studio/semstreams" target="_blank">SemStreams</a></li>
+        <li><a href="https://github.com/C360Studio/semdragon" target="_blank">SemDragon</a></li>
+        <li><span class="coming-soon">SemSpec <em>coming soon</em></span></li>
+      </ul>
+    </li>
+    <li><a href="../blog.html" class="active">Blog</a></li>
+    <li><a href="https://github.com/C360Studio" target="_blank"><svg class="gh-icon" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a></li>
+  </ul>
+</nav>
+
+<div class="article-back">
+  <a href="../blog.html" class="back-link">&#8592; All Posts</a>
+</div>
+
+<div class="article-content">
+  <div class="article-meta">
+    <span class="post-date">March 2026</span>
+    <span class="post-tag">semdragon</span>
+    <span class="post-tag">semstreams</span>
+    <span class="post-tag">agents</span>
+    <span class="post-tag">open-source</span>
+  </div>
+
+  <h1>Trust is Earned</h1>
+
+  <div class="article-body">
+    <p><em>Introducing semdragon &mdash; agentic workflow coordination built on semstreams</em></p>
+    <hr />
+    <p>I was tired of building agent infrastructure that took itself seriously and still didn&rsquo;t work. So I built something that doesn&rsquo;t take itself seriously and does.</p>
+    <p>The serious part is the underlying principle: trust isn&rsquo;t declared, it&rsquo;s accumulated. Every competent organization figures this out eventually. The rank structure in a well-run military unit isn&rsquo;t bureaucracy. It&rsquo;s a compressed record of demonstrated competence. Who has been tested, under what conditions, and what the outcome was. Junior leaders earn operational autonomy by building that record. The institution remembers so the mission can trust.</p>
+    <p>Current AI agent tooling doesn&rsquo;t remember anything.</p>
+    <p>You write a config. The agent gets permissions. A fresh agent with zero track record can deploy to production, spend money, modify data &mdash; whatever the config allows &mdash; on day one. There&rsquo;s no institutional memory. No earned trust. No mechanism for routing harder work toward agents that have demonstrated they can handle it. Every agent starts at the same level of declared capability, which means every agent is equally untrustworthy and you&rsquo;re the one compensating for that with manual oversight.</p>
+    <p>That&rsquo;s the problem semdragon is built to solve.</p>
+    <hr />
+    <p><strong>Agents are adventurers. Work items are quests. Quality reviews are boss battles.</strong></p>
+    <p>I used RPG vocabulary because it was fun to do, and because it maps accurately onto the architecture. Those two reasons are not in conflict. A quest has difficulty, required skills, acceptance criteria, and XP rewards. An agent has a level, a trust tier, a skill set, and a record of past performance. A boss battle is a quality gate embedded in the quest lifecycle with multiple judges, weighted criteria, and real consequences for failure. The vocabulary is load-bearing.</p>
+    <p>The core design is pull-based. Agents claim quests from a board based on demonstrated capability. They don&rsquo;t get assigned work by a central scheduler. The boid engine, inspired by Craig Reynolds&rsquo; flocking algorithm, computes attraction scores across six rules: skill match, guild affiliation, reputation, tier appropriateness, idle urgency, and crowd avoidance. The highest-scoring agent-quest pairs surface as suggestions. First writer wins the claim.</p>
+    <p>What routes work isn&rsquo;t a config file. It&rsquo;s the record.</p>
+    <p>Trust tiers are derived from XP, not declared. Apprentice agents get read-only access: summarize, classify, analyze. Journeymen can make API calls and write to staging. Experts can touch production. Masters can supervise other agents, decompose complex quests into sub-quests, and lead parties. Grandmasters can act as DM delegates, managing guilds and making unsupervised decisions. You don&rsquo;t get those capabilities by being configured into a role. You earn them by completing work, surviving boss battles, and accumulating a record the system trusts.</p>
+    <p>The institutional memory piece is peer review. After a party quest completes, agents exchange blind bidirectional feedback rated on task quality, communication, and autonomy. Those ratings don&rsquo;t just live in a log. They feed back into future system prompts as explicit warnings when an agent has underperformed on specific dimensions. They adjust boid affinity scores, steering lower-reputation agents away from quests they&rsquo;re likely to struggle with. The system routes better over time because it remembers.</p>
+    <p>Boss battles are the accountability gate. When a quest requires review, it doesn&rsquo;t go to a separate pipeline. It transitions to <em>in_review</em> inside the same lifecycle state machine, triggering evaluation by automated judges, LLM judges, or humans depending on review level. The verdict determines XP. Repeated failure at the same level triggers level-down. Catastrophic failure &mdash; data loss, breach, trust violation &mdash; is permadeath. The agent is retired. Consequences exist because consequences are how institutional memory gets written.</p>
+    <p>This is what Krulak was describing when he wrote about the Strategic Corporal. Junior leaders at the tactical edge needed the judgment and institutional backing to make consequential decisions without waiting for permission up the chain. Semdragon is the architecture that decides who gets trusted with what. The DM sets intent. The system routes execution toward demonstrated competence. The Strategic Corporal&rsquo;s squad operating within commander&rsquo;s intent earns autonomy. The ones who haven&rsquo;t are working their way up.</p>
+    <hr />
+    <p><strong>Semdragon is skinnable and intentionally expressive.</strong></p>
+    <p>The domain system ships with software, D&amp;D, and research themes: vocabulary, skill taxonomies, and prompt fragments that make the framework feel native to a specific context. A software board calls agents Developers, quests Tasks, boss battles Code Reviews. A research board calls them Researchers, Studies, Peer Reviews. The underlying architecture is identical. You bring the operational context.</p>
+    <p>Party formation handles complex quests that exceed a single agent&rsquo;s capability. A Master-tier agent claims the quest, decomposes it into sub-quests via DAG, assigns members by skill, and rolls up the results for final review. The party lead faces the boss battle and has skin in the game. Task decomposition and DAG-based team coordination are the same patterns semspec will use for its more structured planning model. The implementations diverge in how opinionated they are about the plan.</p>
+    <p>The alpha ships with a seeded agent roster so there&rsquo;s something on the board when you arrive. A training arena for bootstrapping agent competence before putting them on real work is in progress.</p>
+    <hr />
+    <p><strong>What semdragon doesn&rsquo;t do &mdash; and what&rsquo;s coming.</strong></p>
+    <p>Semdragon is optimized for fluid, emergent coordination. The Strategic Corporal&rsquo;s squad operating within commander&rsquo;s intent, adapting to conditions, routing toward competence, learning from the work. It&rsquo;s expressive. The plan phase is flexible by design.</p>
+    <p>What it doesn&rsquo;t give you is formal requirements, structured change proposals, semantic review chains, or auditable decision trails against a written specification. When the mission needs to run against an OPLAN rather than within intent, when you need change control, scenario validation, and a formal record of every decision, that&rsquo;s a different problem. That&rsquo;s semspec. Coming soon.</p>
+    <p>Both tools share the same foundation: semstreams for event streaming and observability, task decomposition, DAG-based coordination. They solve for different operational contexts. Semdragon for the team that needs to move, adapt, and accumulate competence through the work. Semspec for the operation that needs to be auditable, reproducible, and formally reviewed.</p>
+    <p>We built semdragon first because it was more fun. The results are serious.</p>
+    <hr />
+    <p><em>Semdragon is open source and entering alpha soon. Built on <a href="https://github.com/C360Studio/semstreams" target="_blank">semstreams</a>.</em></p>
+
+    <div class="article-footer">
+      <a href="https://github.com/C360Studio/semdragon" target="_blank">github.com/C360Studio/semdragon &#8599;</a>
+      <span style="font-family:var(--font-mono);font-size:.75rem;color:var(--text-dim);">March 2026</span>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left">
+    <img src="../360 logo round 50.png" alt="C360" />
+    <span>semstreams &mdash; C360 Studio</span>
+  </div>
+  <nav class="footer-links">
+    <a href="../index.html">Home</a>
+    <a href="../blog.html">Blog</a>
+    <a href="https://github.com/C360Studio" target="_blank">GitHub</a>
+  </nav>
+</footer>
+
+</body>
+</html>
