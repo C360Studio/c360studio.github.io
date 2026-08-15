@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — C360 Studio</title>
+  <meta name="description" content="The sem* ecosystem: real products built on Semstreams, each one pushing the framework hard along a different axis." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="360 logo round 50.png" />
+  <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="360 logo round 50.png" alt="C360 Studio" />
+    <span>C360 Studio</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li class="nav-dropdown">
+      <a href="projects.html" class="active">Projects</a>
+      <ul class="dropdown-menu">
+        <li><a href="projects.html">All Projects</a></li>
+        <li><a href="https://github.com/C360Studio/semstreams" target="_blank">SemStreams</a></li>
+        <li><a href="https://github.com/C360Studio/semsource" target="_blank">SemSource</a></li>
+        <li><a href="https://github.com/C360Studio/semteams" target="_blank">SemTeams</a></li>
+        <li><a href="https://github.com/C360Studio/semdev" target="_blank">SemDev</a></li>
+        <li><a href="https://github.com/C360Studio/semconnect" target="_blank">SemConnect</a></li>
+      </ul>
+    </li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="https://github.com/C360Studio" target="_blank"><svg class="gh-icon" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a></li>
+  </ul>
+</nav>
+
+<header class="projects-header">
+  <div class="section-label">// The Ecosystem</div>
+  <h1>One framework.<br/><em>Many hard problems.</em></h1>
+  <p>Semstreams is the substrate. Eleven projects are built on it, each pushed hard along a different axis until the framework tells us where it breaks. Three more stand alongside it — standalone services the ecosystem depends on but does not build on.</p>
+</header>
+
+<section class="why-section">
+  <div class="why-inner">
+    <div class="why-grid">
+      <div class="why-left">
+        <div class="section-label">// Why So Many</div>
+        <h2>The products are the pressure.</h2>
+        <p>Semstreams has no synthetic benchmark suite standing in for real use. Every <code>sem*</code> project below is something we actually needed, built by driving one capability past comfortable.</p>
+        <p>That means framework gaps arrive as <strong>product pain</strong> rather than as a passing test. A scheduler problem found in SemBoids at 30Hz is a scheduler fix upstream. A projection-contract problem found by SemConnect against the OGC conformance suite is a contract fix upstream. The consumers are the design pressure, and the framework is what survives them.</p>
+        <ul class="axis-list">
+          <li><b>Throughput</b><span>SemBoids — flocking physics and live graph snapshots at a tunable cadence.</span></li>
+          <li><b>Rules</b><span>SemBoids again — zone steering as JSON rules you toggle at runtime.</span></li>
+          <li><b>Agentic</b><span>SemTeams, SemDev, SemMachina — loops, dispatch, tools, personas, budgets.</span></li>
+          <li><b>Edge &amp; offline</b><span>SemLink — vehicle-local state and intermittent peer replication.</span></li>
+          <li><b>Standards</b><span>SemConnect — an external conformance suite we do not control.</span></li>
+          <li><b>Ingest scale</b><span>SemSource — code, docs, configs, and media with provenance intact.</span></li>
+        </ul>
+      </div>
+      <div class="why-right">
+        <div class="proof-callout">
+          <div class="proof-label">// The Falsifiable Claim</div>
+          <p><strong>SemTeams ships with no custom Go components.</strong> Every processor it runs — <code>graph</code>, <code>rule</code>, <code>agentic-dispatch</code>, <code>agentic-loop</code>, <code>agentic-model</code>, <code>agentic-tools</code> — is imported from Semstreams. The product is configs, rules, and personas.</p>
+          <p style="margin-top:1rem;">That is the sharpest test of whether a framework is finished enough to be worth your time, and it is the one claim here you can check yourself in about five minutes.</p>
+        </div>
+        <div class="proof-callout" style="margin-top:1.5rem;">
+          <div class="proof-label">// How To Read Status</div>
+          <p><strong>Stage</strong> is where a project sits in its own life. <strong>Tracks</strong> is the Semstreams release it pins, which is the honest measure of how close it runs to the current framework.</p>
+          <p style="margin-top:1rem;">An older pin means the project is resting, not rotting — the labs get picked back up in rotation, and the pin is what they resume from.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projects-section">
+
+  <div class="table-group">
+    <h2>Core <span class="group-qualifier">— built on Semstreams</span></h2>
+    <p class="group-note">The framework and the products we build and run against it continuously.</p>
+    <div class="table-wrap">
+      <table class="projects">
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Description</th>
+            <th scope="col">Stage</th>
+            <th scope="col">Tracks</th>
+            <th scope="col">Stresses</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semstreams" target="_blank">semstreams</a></td>
+            <td class="proj-desc">The framework. Streaming pipelines that produce a live semantic knowledge graph, reactive rules, workflows, and LLM agent orchestration. One binary, NATS the only dependency.</td>
+            <td><span class="badge badge-active">Active</span></td>
+            <td><span class="track">v1.0.0-beta.160</span><span class="track-tag"><i class="dot dot-current"></i>current release</span></td>
+            <td class="proj-axis">the substrate</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semsource" target="_blank">semsource</a></td>
+            <td class="proj-desc">Ingestion engine. Turns the pile of code, docs, configs, URLs, and media in your projects into a live graph with stable IDs and provenance. Earns its keep when the answer depends on relationships, not filenames.</td>
+            <td><span class="badge badge-beta">Beta</span><span class="badge-sub">v1.0.0-beta.6</span></td>
+            <td><span class="track">beta.160</span><span class="track-tag"><i class="dot dot-current"></i>current</span></td>
+            <td class="proj-axis">ingest scale<br/>indexing profiles</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semteams" target="_blank">semteams</a></td>
+            <td class="proj-desc">Agentic team coordination. The product shell — UI, personas, rules, configs — demonstrating a full multi-agent system with zero custom framework code.</td>
+            <td><span class="badge badge-active">Active</span></td>
+            <td><span class="track">beta.159</span><span class="track-tag"><i class="dot dot-recent"></i>recent</span></td>
+            <td class="proj-axis">agentic loop<br/>framework completeness</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semdev" target="_blank">semdev</a></td>
+            <td class="proj-desc">GitHub issue in, clean-room-verified pull request out. Two human gates, harness-owned measurement, budget-bounded and unattended in between. No bespoke lifecycle state machine.</td>
+            <td><span class="badge badge-active">Active</span></td>
+            <td><span class="track">beta.160</span><span class="track-tag"><i class="dot dot-current"></i>current</span></td>
+            <td class="proj-axis">agentic<br/>verification rigor</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semconnect" target="_blank">semconnect</a></td>
+            <td class="proj-desc">OGC API Connected Systems gateway. Owns the OGC product bundle — OMS, SensorML, SWE Common, SOSA — over the framework's graph and projection contracts. External qualification at 137/137 passing.</td>
+            <td><span class="badge badge-active">Active</span></td>
+            <td><span class="track">beta.160</span><span class="track-tag"><i class="dot dot-current"></i>current</span></td>
+            <td class="proj-axis">standards conformance<br/>projections</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semstreams-ui" target="_blank">semstreams-ui</a></td>
+            <td class="proj-desc">Operational glass. Graph explorer, flow builder, and runtime monitoring for any Semstreams app. Backend-agnostic — discovers components, schemas, and graph data at runtime.</td>
+            <td><span class="badge badge-beta">Beta</span><span class="badge-sub">TypeScript</span></td>
+            <td><span class="track">API-level</span><span class="track-tag"><i class="dot dot-na"></i>no Go pin</span></td>
+            <td class="proj-axis">runtime API surface</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="table-group">
+    <h2>Labs <span class="group-qualifier">— built on Semstreams</span></h2>
+    <p class="group-note">Each one exists to push a single capability past comfortable. Some are in active rotation; the paused ones are picked back up deliberately, and their pin is where they resume.</p>
+    <div class="table-wrap">
+      <table class="projects">
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Description</th>
+            <th scope="col">Stage</th>
+            <th scope="col">Tracks</th>
+            <th scope="col">Stresses</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semboids" target="_blank">semboids</a></td>
+            <td class="proj-desc">Reynolds boids, split-screen against their own live graph. Three steering rules produce emergent flocking; zone steering is JSON rules you toggle from the UI, and boids are born and culled through the graph itself.</td>
+            <td><span class="badge badge-lab">Lab</span></td>
+            <td><span class="track">beta.160</span><span class="track-tag"><i class="dot dot-current"></i>current</span></td>
+            <td class="proj-axis">throughput<br/>rules engine</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semmachina" target="_blank">semmachina</a></td>
+            <td class="proj-desc">Fiction-first AI RPG. The world holds a truth independent of any story told about it, so narrative drift becomes detectable — narration can be diffed against the graph and corrected.</td>
+            <td><span class="badge badge-lab">Lab</span></td>
+            <td><span class="track">beta.160</span><span class="track-tag"><i class="dot dot-current"></i>current</span></td>
+            <td class="proj-axis">agentic<br/>graph as authority</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semlink" target="_blank">semlink</a></td>
+            <td class="proj-desc">MAVLink companion mesh for vehicle-local state, local rules, and intermittent peer replication. BlueOS-compatible, not BlueOS-dependent. Grew out of the SemGCS ground-control demo.</td>
+            <td><span class="badge badge-paused">Paused</span></td>
+            <td><span class="track">beta.141</span><span class="track-tag"><i class="dot dot-lagging"></i>lagging</span></td>
+            <td class="proj-axis">edge &amp; offline<br/>replication</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semops" target="_blank">semops</a></td>
+            <td class="proj-desc">Data-fusion common operating picture. Owns the operator COP, feed adapters, canonical COP model, and scenario runner over the framework's projection and ownership rules.</td>
+            <td><span class="badge badge-paused">Paused</span></td>
+            <td><span class="track">beta.114</span><span class="track-tag"><i class="dot dot-lagging"></i>lagging</span></td>
+            <td class="proj-axis">data fusion<br/>geospatial</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semdragon" target="_blank">semdragon</a></td>
+            <td class="proj-desc">Agentic workflow coordination modeled as a tabletop RPG. Work items are quests, quality gates are boss battles, and trust tiers are earned through demonstrated competence rather than declared up front.</td>
+            <td><span class="badge badge-paused">Paused</span></td>
+            <td><span class="track">beta.21</span><span class="track-tag"><i class="dot dot-pinned"></i>pinned</span></td>
+            <td class="proj-axis">coordination<br/>trust modeling</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="table-group">
+    <h2>Supporting <span class="group-qualifier">— not built on Semstreams</span></h2>
+    <p class="group-note">These three are <strong>not</strong> counted in the eleven above and carry no Semstreams dependency to pin. They are standalone services the ecosystem leans on, and two of them earn their keep well outside it.</p>
+    <div class="table-wrap">
+      <table class="projects">
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Description</th>
+            <th scope="col">Stage</th>
+            <th scope="col">Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semembed" target="_blank">semembed</a></td>
+            <td class="proj-desc">Embedding service built on fastembed-rs. Multi-architecture without emulation, OpenAI-compatible, and a materially smaller footprint than the alternatives. Runs in production behind SemSource, and stands on its own for anyone who wants neural embeddings without the operational weight.</td>
+            <td><span class="badge badge-active">Production</span></td>
+            <td class="proj-axis">embeddings</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/servicesim" target="_blank">servicesim</a></td>
+            <td class="proj-desc">Deterministic HTTP simulator for the Exa, Tavily, and Perplexity research APIs. Proves your client sent the correct vendor request, not merely that it got a response. Fails closed, never dials outward, and redacts credentials before anything is retained. MCP mocking and streaming support are in progress — the goal is to retire the hand-rolled LLM mocks scattered across the ecosystem and replace them with one thing worth trusting.</td>
+            <td><span class="badge badge-active">Active</span><span class="badge-sub">v0.1.1</span></td>
+            <td class="proj-axis">test infrastructure</td>
+          </tr>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/seminstruct" target="_blank">seminstruct</a></td>
+            <td class="proj-desc">Instruct-tier inference images — chat completions, classification, summarization. llama.cpp with a curated GGUF baked in and an OpenAI-compatible API. Exists so instruct-tier work can run locally when the hardware in front of you is the constraint.</td>
+            <td><span class="badge badge-alpha">Alpha</span></td>
+            <td class="proj-axis">local inference</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="legend">
+    <span><i class="dot dot-current"></i>Current — pins the latest release</span>
+    <span><i class="dot dot-recent"></i>Recent — within 10 releases</span>
+    <span><i class="dot dot-lagging"></i>Lagging — more than 10 behind</span>
+    <span><i class="dot dot-pinned"></i>Pinned — deliberately frozen</span>
+  </div>
+
+  <p class="verified-note">Pins verified against <code>go.mod</code> on 15 August 2026. Semstreams was at v1.0.0-beta.160.</p>
+
+</section>
+
+<footer>
+  <div class="footer-left">
+    <img src="360 logo round 50.png" alt="C360" />
+    <span>semstreams &mdash; C360 Studio</span>
+  </div>
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://github.com/C360Studio" target="_blank">GitHub</a>
+  </nav>
+</footer>
+</body>
+</html>
