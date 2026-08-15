@@ -60,8 +60,9 @@
       <div class="why-right">
         <div class="proof-callout">
           <div class="proof-label">// The Falsifiable Claim</div>
-          <p><strong>SemTeams ships with no custom Go components.</strong> Every processor it runs — <code>graph</code>, <code>rule</code>, <code>agentic-dispatch</code>, <code>agentic-loop</code>, <code>agentic-model</code>, <code>agentic-tools</code> — is imported from Semstreams. The product is configs, rules, and personas.</p>
-          <p style="margin-top:1rem;">That is the sharpest test of whether a framework is finished enough to be worth your time, and it is the one claim here you can check yourself in about five minutes.</p>
+          <p><strong>SemTeams contributes no processors of its own.</strong> Every component in its flows — <code>graph</code>, <code>rule</code>, <code>agentic-dispatch</code>, <code>agentic-loop</code>, <code>agentic-model</code>, <code>agentic-tools</code> — comes from Semstreams, registered in a single call at startup.</p>
+          <p style="margin-top:1rem;">That is not the same as &ldquo;no Go.&rdquo; SemTeams is a real product shell — a CLI, sandbox runtime, HTTP middleware, and its own vocabulary predicates. The claim is narrower and sharper than <em>we wrote nothing</em>: nothing on the processing path had to be written.</p>
+          <p style="margin-top:1rem;">Check it in about five minutes. Search the repo for a component factory registration — there is exactly one, and it belongs to the framework.</p>
         </div>
         <div class="proof-callout" style="margin-top:1.5rem;">
           <div class="proof-label">// How To Read Status</div>
@@ -106,7 +107,7 @@
           </tr>
           <tr>
             <td class="proj-name"><a href="https://github.com/C360Studio/semteams" target="_blank">semteams</a></td>
-            <td class="proj-desc">Agentic team coordination. The product shell — UI, personas, rules, configs — demonstrating a full multi-agent system with zero custom framework code.</td>
+            <td class="proj-desc">Agentic team coordination. The product shell — UI, personas, rules, configs, and the tooling around them — demonstrating a full multi-agent system whose every processor comes from the framework.</td>
             <td><span class="badge badge-active">Active</span></td>
             <td><span class="track">beta.159</span><span class="track-tag"><i class="dot dot-recent"></i>recent</span></td>
             <td class="proj-axis">agentic loop<br/>framework completeness</td>
