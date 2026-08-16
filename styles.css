@@ -351,8 +351,9 @@ footer {
 .group-qualifier {
   font-family: var(--font-mono); font-size: .7rem; color: var(--text-dim);
   letter-spacing: .08em; text-transform: uppercase; vertical-align: middle;
-  margin-left: .25rem; white-space: nowrap;
+  margin-left: .6rem; white-space: nowrap;
 }
+.group-qualifier::before { content: '\00B7'; margin-right: .6rem; color: var(--border); }
 .group-note strong { color: var(--text); font-weight: 400; }
 .group-note { font-size: .95rem; color: var(--text-dim); max-width: 640px; margin-bottom: 1.75rem; line-height: 1.8; }
 
