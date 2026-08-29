@@ -470,3 +470,5 @@ table.projects { width: 100%; border-collapse: collapse; min-width: 900px; }
 @media (max-width: 768px) {
   .ledger-row { grid-template-columns: 1fr; gap: .5rem; }
 }
+
+.badge-planning { color: var(--text-dim); border-color: var(--border); }
