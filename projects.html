@@ -37,7 +37,7 @@
 <header class="projects-header">
   <div class="section-label">// The Ecosystem</div>
   <h1>One framework.<br/><em>Many hard problems.</em></h1>
-  <p>Semstreams is the substrate. Eleven projects are built on it, and each one pushes a different capability until the framework tells us where it breaks. Three more stand alongside it: standalone services the ecosystem depends on but doesn't build on.</p>
+  <p>Semstreams is the substrate. Everything built on it is either a product we run continuously on our own metal, or a lab where one capability gets pushed until the framework tells us where it breaks. Three more stand alongside: standalone services the ecosystem depends on but doesn't build on.</p>
 </header>
 
 <section class="why-section">
@@ -79,7 +79,7 @@
 
   <div class="table-group">
     <h2>Core <span class="group-qualifier">built on Semstreams</span></h2>
-    <p class="group-note">The framework and the products we build and run against it continuously.</p>
+    <p class="group-note">The framework, and the stack we run on our own metal every day. Core is a short list on purpose. These are the ones we get woken up for.</p>
     <div class="table-wrap">
       <table class="projects">
         <thead>
@@ -121,11 +121,11 @@
             <td class="proj-axis">agentic<br/>verification rigor</td>
           </tr>
           <tr>
-            <td class="proj-name"><a href="https://github.com/C360Studio/semconnect" target="_blank">semconnect</a></td>
-            <td class="proj-desc">OGC API Connected Systems gateway. Owns the OGC product bundle (OMS, SensorML, SWE Common, SOSA) over the framework's graph and projection contracts. External qualification at 137/137 passing.</td>
-            <td><span class="badge badge-active">Active</span></td>
-            <td><span class="track">beta.160</span><span class="track-tag"><i class="dot dot-current"></i>current</span></td>
-            <td class="proj-axis">standards conformance<br/>projections</td>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semmem" target="_blank">semmem</a></td>
+            <td class="proj-desc">Institutional memory. Lessons, decisions and the evidence behind them held as graph entities instead of in each agent's private notes. A problem is filed with its proposed solution, and a trend becomes doctrine that later runs are handed automatically. The existing repo was built for semantic issue tracking and is being repointed at this, so read the description as the target rather than today.</td>
+            <td><span class="badge badge-planning">Planning</span></td>
+            <td><span class="track">unpinned</span><span class="track-tag"><i class="dot dot-na"></i>pivot pending</span></td>
+            <td class="proj-axis">institutional memory<br/>lesson corpus</td>
           </tr>
           <tr>
             <td class="proj-name"><a href="https://github.com/C360Studio/semstreams-ui" target="_blank">semstreams-ui</a></td>
@@ -141,7 +141,7 @@
 
   <div class="table-group">
     <h2>Labs <span class="group-qualifier">built on Semstreams</span></h2>
-    <p class="group-note">Each one exists to push a single capability past comfortable. Some are in active rotation; the paused ones are picked back up deliberately, and their pin is where they resume.</p>
+    <p class="group-note">Each one exists to push a single capability past comfortable, against something real, before it is anyone's dependency. Some are in active rotation; the paused ones are picked back up deliberately, and their pin is where they resume. Some stay labs as long as there is another dial to turn. Some earn promotion into Core.</p>
     <div class="table-wrap">
       <table class="projects">
         <thead>
@@ -154,6 +154,13 @@
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td class="proj-name"><a href="https://github.com/C360Studio/semconnect" target="_blank">semconnect</a></td>
+            <td class="proj-desc">OGC API Connected Systems gateway. Owns the OGC product bundle (OMS, SensorML, SWE Common, SOSA) over the framework's graph and projection contracts. External qualification at 137/137 passing.</td>
+            <td><span class="badge badge-active">Active</span></td>
+            <td><span class="track">beta.160</span><span class="track-tag"><i class="dot dot-current"></i>current</span></td>
+            <td class="proj-axis">standards conformance<br/>projections</td>
+          </tr>
           <tr>
             <td class="proj-name"><a href="https://github.com/C360Studio/semboids" target="_blank">semboids</a></td>
             <td class="proj-desc">Reynolds boids, split-screen against their own live graph. Three steering rules produce emergent flocking; zone steering is JSON rules you toggle from the UI, and boids are born and culled through the graph itself.</td>
@@ -196,7 +203,7 @@
 
   <div class="table-group">
     <h2>Supporting <span class="group-qualifier">not built on Semstreams</span></h2>
-    <p class="group-note">These three are <strong>not</strong> counted in the eleven above and carry no Semstreams dependency to pin. They are standalone services the ecosystem leans on, and two of them earn their keep well outside it.</p>
+    <p class="group-note">These three carry no Semstreams dependency to pin, so they sit outside the Core and Labs split entirely. They are standalone services the ecosystem leans on, and two of them earn their keep well outside it.</p>
     <div class="table-wrap">
       <table class="projects">
         <thead>
