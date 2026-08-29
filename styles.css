@@ -439,3 +439,34 @@ table.projects { width: 100%; border-collapse: collapse; min-width: 900px; }
   .axis-list b { min-width: 0; }
   footer { flex-direction: column; gap: 1.5rem; text-align: center; }
 }
+
+/* Ledger: claim / status / how you check it */
+.ledger { margin: 2.5rem 0; border-top: 1px solid var(--border); }
+.ledger-row {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) 7rem 1fr;
+  gap: .4rem 1.5rem;
+  align-items: baseline;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+.ledger-claim { font-family: var(--font-body); color: var(--text-lt); }
+.ledger-check { font-size: .92rem; color: var(--text-dim); line-height: 1.55; }
+.ledger-check code { font-size: .85em; }
+.ledger-state {
+  font-family: var(--font-mono);
+  font-size: .64rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .28em .6em;
+  border: 1px solid;
+  white-space: nowrap;
+  display: inline-block;
+}
+.state-yes  { color: var(--green-lt);  border-color: var(--green);      background: rgba(74,124,89,.12); }
+.state-part { color: var(--amber);     border-color: var(--amber-dim);  background: rgba(212,168,67,.10); }
+.state-not  { color: var(--orange-lt); border-color: var(--orange-dim); background: rgba(232,67,10,.10); }
+@media (max-width: 768px) {
+  .ledger-row { grid-template-columns: 1fr; gap: .5rem; }
+}
