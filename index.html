@@ -37,9 +37,9 @@
   <div class="hero-grid"></div>
   <div class="hero-content">
     <div class="hero-product">Semstreams</div>
-    <div class="hero-tag">Alpha Release</div>
-    <h1>Streams in.<br/><em>Knowledge out.</em></h1>
-    <p class="hero-sub">A Go framework for building streaming pipelines that produce live semantic knowledge graphs. For environments where connectivity is intermittent, compute is finite, and the environment will not cooperate.</p>
+    <div class="hero-tag">Pre-1.0</div>
+    <h1>Streams in.<br/>Knowledge out.<br/><em>The loop closes.</em></h1>
+    <p class="hero-sub">A Go framework for systems that take in the world, decide what to do about it, and act without leaving the box. Field telemetry and agent runs land in the same live knowledge graph. Rules decide what they can; models decide what they must. For environments where connectivity is intermittent, compute is finite, and the environment will not cooperate.</p>
     <div class="hero-actions">
       <a href="https://github.com/C360Studio/semstreams/tree/main/docs" target="_blank" class="btn-primary">Get Started &#8594;</a>
       <a href="https://github.com/C360Studio/semstreams" target="_blank" class="btn-ghost">View on GitHub</a>
@@ -58,6 +58,7 @@
       <h2>Comms suck.<br/>Design accordingly.</h2>
       <p>Current AI infrastructure assumes always-on connectivity, abundant compute, rich model access, and an enormous token budget. What we call <strong>ambient affluence</strong>.</p>
       <p>Thirty years of experience has taught us that these idealistic conditions rarely hold. Even if you have the budget, operational reality often has other plans. So if the environment will not cooperate, the architecture should embrace that reality from the start.</p>
+      <p>So the hard decisions got made early, under conditions that would not let us defer them. Write authority. Restart behaviour. What happens to evidence when there is nobody to send it to. That is the part you inherit, and the part you can check.</p>
       <a href="blog.html" class="btn-ghost" style="display:inline-flex;margin-top:1rem;">Read "Comms Suck" &#8594;</a>
     </div>
     <div class="truth-right">
@@ -68,51 +69,146 @@
   </div>
 </section>
 
+<section class="truth-section">
+  <div class="truth-grid">
+    <div class="truth-left">
+      <div class="section-label">// The Loop</div>
+      <h2>One loop.<br/>Closed <em>locally</em>.</h2>
+      <p>Most stacks are a pipeline. Data goes in, something comes out, and the part where the system gets better is a meeting. This one is a loop, and every stage of it runs on the same box.</p>
+      <p>The graph is the load-bearing piece. Not storage. <strong>Orientation</strong>. It is the model of the situation that gives an observation its meaning, and it updates as things happen rather than overnight in a batch.</p>
+    </div>
+    <div class="truth-right">
+      <div class="truth-item"><div class="truth-item-label">Observation</div><p>A sensor reading. A tool call. An agent's answer. The graph does not care which produced it, which is why adding agents needed no new architecture.</p></div>
+      <div class="truth-item"><div class="truth-item-label">Orientation</div><p>Entities, relationships and the structure between them, held live. What changed, what it touches, what it now means.</p></div>
+      <div class="truth-item"><div class="truth-item-label">Decision</div><p>Rules first, and a model only when the call genuinely needs judgment. Deterministic where it matters, intelligent where it helps.</p></div>
+      <div class="truth-item"><div class="truth-item-label">Action</div><p>Components do the work. Rules pass references, never payloads, so a decision cannot quietly blow up a context window.</p></div>
+      <div class="truth-item"><div class="truth-item-label">Learning</div><p>What went wrong is written down as a citation-backed lesson, reviewed by a human, and pushed into every run that follows.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="principles-section">
   <div class="principles-inner">
-    <div class="section-label">// Design Principles</div>
-    <h2>What this is built around.</h2>
+    <div class="section-label">// What You Don't Specify</div>
+    <h2>The spec you never wrote.</h2>
+    <p class="eco-lede">A framework is worth having when your own spec gets shorter. These are the decisions that never announce themselves as decisions. The ones that surface under load, once, expensively. We know which ones you would get wrong because we got them wrong first, in public, and they are gates now because they were bugs then.</p>
     <div class="principles-grid">
-      <div class="principle"><div class="principle-icon">&#8853;</div><h3>Graceful Degradation</h3><p>Start with what works offline. Add intelligence when you can afford it and when the problem demands it. Each tier is genuinely independent. You don't lose everything when you lose something.</p></div>
-      <div class="principle"><div class="principle-icon">&#9670;</div><h3>Composable by Default</h3><p>Dotted notation internally. Interop at the boundaries. Take or leave what you need. No prescribed ontology required on day one. The system meets you where you are.</p></div>
-      <div class="principle"><div class="principle-icon">&#9651;</div><h3>Observable Decisions</h3><p>Full trajectory capture. An agent that can explain what it did and why isn't just more trustworthy. It's actually useful when auditability isn't optional.</p></div>
-      <div class="principle"><div class="principle-icon">&#9633;</div><h3>Cost-Aware by Design</h3><p>The model registry lets you configure models by capability, right-sizing inference to the task. Agentic components are built for efficient token use and managed context. Spend where the problem demands it, not everywhere by default.</p></div>
+      <div class="principle"><div class="principle-icon">&#8853;</div><h3>Write Authority</h3><p>One writer owns graph state. Everything else asks through a typed port. There is no design meeting about who is allowed to write, because there is no version of this where two things do.</p></div>
+      <div class="principle"><div class="principle-icon">&#9670;</div><h3>Identity Offline</h3><p>Deterministic IDs carry the deployment that minted them. Two nodes that have never met cannot collide, and their graphs merge later without anything coordinating them.</p></div>
+      <div class="principle"><div class="principle-icon">&#9651;</div><h3>Restart Behaviour</h3><p>Current facts rehydrate. Unacknowledged work redelivers. Which one you get follows from the primitive you picked, so it is decided before you write a line.</p></div>
+      <div class="principle"><div class="principle-icon">&#9633;</div><h3>Orchestration</h3><p>Rules trigger, components execute. There is no workflow engine to adopt, outgrow and regret. Multi-step work is coordinated rules with iteration caps and durable state.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="principles-section">
+  <div class="principles-inner">
+    <div class="section-label">// Evidence</div>
+    <h2>Show me the run.</h2>
+    <p class="eco-lede">An agentic system you cannot audit is a black hole. A transcript at best, nothing verifiable, and no answer at all to what that tool actually returned. So execution evidence here is a first-class capability rather than trace exhaust. Runs are recorded as graph entities, with the evidence stored beside them, and expiry never reclaims it.</p>
+    <p class="eco-lede">The austere case forced this and then improved it. When there is no observability vendor to ship a trace to and no link to ship it over, evidence has to be local, bounded, durable and answerable on the box. That constraint produced something worth having everywhere.</p>
+    <p class="eco-lede">It is not only our own runs we hold to it. SemConnect answers to an OGC Connected Systems conformance suite we did not write, do not control and cannot grade: <strong>137 of 137 passing</strong>. An external qualification you can go run against us yourself is worth more than anything else on this page.</p>
+    <p class="alpha-note">Everyone ships a demo and a story. We ship the run.</p>
+  </div>
+</section>
+
+<section class="principles-section">
+  <div class="principles-inner">
+    <div class="section-label">// Where This Comes From</div>
+    <h2>Not a methodology.<br/>A flight line.</h2>
+    <p class="eco-lede">A problem gets reported with a proposed solution. A trend becomes an SOP. That is the After Action Report, and it is older and harder-won than the industry that rebranded it. It comes from places where the feedback signal is fatal and the debrief is not optional.</p>
+    <p class="eco-lede">It is also, exactly, how lessons work here. Proposed, cited, reviewed by a human, then carried into every run that follows. An SOP nobody enforces is a guideline. That is why the rules in this repo are gates. Lint that fails the build, schema drift that fails the build, breaking changes that do not land without a green end-to-end tier.</p>
+    <p class="eco-lede"><strong>We forge and we swing.</strong> Semstreams is the hammer; semdev, semsource and the labs are us swinging it at our own work until something bends. A carpenter can only report on using the tool. A toolmaker can only report on making it. Both is rarer, and it is checkable.</p>
   </div>
 </section>
 
 <section>
   <div class="eco-inner">
     <div class="section-label">// The Ecosystem</div>
-    <h2>Eleven projects.<br/>One substrate.</h2>
+    <h2>Three tiers.<br/>One substrate.</h2>
     <p class="eco-lede">Semstreams has no synthetic benchmark suite standing in for real use. Each <code>sem*</code> project is something we actually needed, built by driving one capability past comfortable: throughput, rules, agentic coordination, edge autonomy, standards conformance. Framework gaps show up as product pain, not as a passing test.</p>
+
+    <div class="truth-item-label">Core: the stack we run on our own metal, every day</div>
     <div class="eco-strip">
       <span class="eco-chip">semstreams</span>
       <span class="eco-chip">semsource</span>
       <span class="eco-chip">semteams</span>
       <span class="eco-chip">semdev</span>
-      <span class="eco-chip">semconnect</span>
+      <span class="eco-chip">semmem</span>
       <span class="eco-chip">semstreams-ui</span>
+    </div>
+
+    <div class="truth-item-label">Labs: where framework ideas get tested against something real</div>
+    <div class="eco-strip">
       <span class="eco-chip">semboids</span>
       <span class="eco-chip">semmachina</span>
       <span class="eco-chip">semlink</span>
       <span class="eco-chip">semops</span>
+      <span class="eco-chip">semconnect</span>
       <span class="eco-chip">semdragon</span>
     </div>
+
+    <div class="truth-item-label">Supporting: standalone services, no framework pin</div>
+    <div class="eco-strip">
+      <span class="eco-chip">semembed</span>
+      <span class="eco-chip">servicesim</span>
+      <span class="eco-chip">seminstruct</span>
+    </div>
+
+    <p class="eco-lede">Core is a short list on purpose. It is what runs on our own hardware, continuously, where we are the ones woken up when it breaks. Everything else is a lab. A place, not a stage, where a framework idea gets driven past comfortable against something real before it is anyone's dependency. Some labs stay labs as long as there is another dial to turn. Some earn promotion into Core. An older pin means a project is resting, not rotting.</p>
     <a href="projects.html" class="btn-ghost">See what each one stresses &#8594;</a>
   </div>
 </section>
 
 <section>
   <div class="cta-section">
-    <div class="section-label">// Alpha</div>
+    <div class="section-label">// Where We Are</div>
     <h2>Early. Honest.<br/>Come break it.</h2>
-    <p>The documentation reflects where we are, not where we're going. If your requirements are clearer in production than they were on paper, this was built for you.</p>
+    <p>The documentation reflects where we are, not where we're going. If your requirements are clearer in production than they were on paper, this was built for you. Here is the same honesty with the vagueness taken out. Four of these you can check yourself before you decide anything.</p>
+
+    <div class="ledger">
+      <div class="ledger-row">
+        <div class="ledger-claim">The hard decisions are already made</div>
+        <div><span class="ledger-state state-yes">Earned</span></div>
+        <div class="ledger-check">One binary, NATS the only dependency. Pull it and run it disconnected on a Pi.</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-claim">Gates, not guidelines</div>
+        <div><span class="ledger-state state-yes">Earned</span></div>
+        <div class="ledger-check">Clone it and run <code>task lint</code>. Lint warnings and schema drift fail the build. They do not file a ticket.</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-claim">Someone else grades us</div>
+        <div><span class="ledger-state state-yes">Earned</span></div>
+        <div class="ledger-check">SemConnect passes 137 of 137 against an OGC conformance suite we did not write. Go run it against us.</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-claim">Agent runs are recorded as evidence</div>
+        <div><span class="ledger-state state-yes">Earned</span></div>
+        <div class="ledger-check">Runs land as graph entities with their evidence stored beside them, and expiry never reclaims it.</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-claim">&hellip;and easy for you to get back out</div>
+        <div><span class="ledger-state state-part">Partial</span></div>
+        <div class="ledger-check">Admitted operations and typed adapters today. There is no general query front door yet, and you will feel that.</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-claim">Your own spec gets shorter</div>
+        <div><span class="ledger-state state-not">Unmeasured</span></div>
+        <div class="ledger-check">We believe it and we have not published a number. Until we do, treat it as a claim and not a finding.</div>
+      </div>
+      <div class="ledger-row">
+        <div class="ledger-claim">The loop closes without us</div>
+        <div><span class="ledger-state state-not">Not yet</span></div>
+        <div class="ledger-check">Lessons are a first-class capability with an empty corpus. Today a human still carries what was learned into the next run.</div>
+      </div>
+    </div>
+
     <div class="cta-actions">
       <a href="https://github.com/C360Studio/semstreams/tree/main/docs" target="_blank" class="btn-primary">Docs on GitHub &#8599;</a>
       <a href="https://github.com/C360Studio/semstreams" target="_blank" class="btn-ghost">GitHub &#8599;</a>
     </div>
-    <p class="alpha-note">Breaking changes will happen. That's the deal.</p>
+    <p class="alpha-note">We called it alpha early and the tags have since moved to beta. We are not renumbering backwards, and nothing about the deal changed: pre-1.0, and breaking changes will happen.</p>
   </div>
 </section>
 
