@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SemEngine &amp; the sem* Family — C360 Studio</title>
-  <meta name="description" content="SemEngine is a Go semantic knowledge graph platform that keeps telemetry, code, rules, and agent runs in one live local graph—backed by optional semantic add-ons, Go tooling, and human-agent governance." />
+  <meta name="description" content="SemEngine is a Go semantic knowledge graph platform that keeps telemetry, code, rules, and agent runs in one live local graph, backed by optional semantic add-ons, Go tooling, and human-agent governance." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="360 logo round 50.png" />
@@ -47,7 +47,7 @@
       <span class="hero-lineage">succeeding SemStreams</span>
     </div>
     <h1>Practical, flexible<br/><em>semantic knowledge graphs.</em></h1>
-    <p class="hero-sub"><strong>SemEngine</strong> is a Go platform over NATS JetStream for holding live operational state, relationships, and rules in one local graph. Start with a small, fast core—and layer on neural embeddings, formal ontologies, SPARQL, or agent workflows only when the problem calls for them.</p>
+    <p class="hero-sub"><strong>SemEngine</strong> is a Go platform over NATS JetStream for holding live operational state, relationships, and rules in one local graph. Start with a small, fast core and layer on neural embeddings, formal ontologies, SPARQL, or agent workflows only when the problem calls for them.</p>
     <div class="hero-actions">
       <a href="#family" class="btn-primary">Explore the sem* Family &#8595;</a>
       <a href="https://github.com/C360Studio/semengine" target="_blank" rel="noopener" class="btn-ghost">SemEngine on GitHub &#8599;</a>
@@ -217,7 +217,7 @@
                       servicesim
                     </span>
                   </div>
-                  <p>Deterministic HTTP &amp; MCP service simulator for Exa, Tavily, and Perplexity—fails closed and never dials out.</p>
+                  <p>Deterministic HTTP &amp; MCP service simulator for Exa, Tavily, and Perplexity. Fails closed and never dials out.</p>
                 </div>
               </a>
             </div>
@@ -347,7 +347,7 @@
       <h2>Graph speed inside.<br/><em>Standards at the edge.</em></h2>
       <p>Most teams want shared structure across streams, code, and agents, but nobody wants to force every service engineer to hand-author RDF blank-node chains just to save application state.</p>
       <p><strong>SemEngine splits that problem cleanly.</strong> Inside the box, programs work with fast six-part dot-separated IDs (<code>org.platform.system.domain.type.instance</code>) and flat predicates over NATS JetStream. No external triple store, no heavy runtime dependencies.</p>
-      <p>When an integration, analyst tool, or compliance gate calls for formal ontologies or W3C queries, <strong>SemVocab</strong> and <strong>SemSparql</strong> attach at the read-only edge—translating live state into BFO, CCO, SOSA, Turtle, or JSON-LD without touching how core services write data.</p>
+      <p>When an integration, analyst tool, or compliance gate calls for formal ontologies or W3C queries, <strong>SemVocab</strong> and <strong>SemSparql</strong> attach at the read-only edge. They translate live state into BFO, CCO, SOSA, Turtle, or JSON-LD without touching how core services write data.</p>
     </div>
     <div class="truth-right">
       <div class="truth-item">
@@ -372,7 +372,7 @@
       <div class="section-label">// How The Loop Runs</div>
       <h2>Observations, rules, and agents<br/><em>on one substrate.</em></h2>
       <p>In a typical stack, telemetry lives in a message bus, repo context lives in bespoke RAG indexes, workflow state lives in Postgres, and agent transcripts disappear into log files.</p>
-      <p>In <code>sem*</code>, the live graph is the orientation layer across all of them. A sensor reading from <strong>SemConnect</strong>, an AST diff from <strong>SemSource</strong>, and a research run in <strong>SemTeams</strong> are all typed entities with explicit provenance—so rules and agents react to live structure instead of stitching context together by hand.</p>
+      <p>In <code>sem*</code>, the live graph is the orientation layer across all of them. A sensor reading from <strong>SemConnect</strong>, an AST diff from <strong>SemSource</strong>, and a research run in <strong>SemTeams</strong> are all typed entities with explicit provenance, so rules and agents react to live structure instead of stitching context together by hand.</p>
     </div>
     <div class="truth-right">
       <div class="truth-item">
@@ -381,7 +381,7 @@
       </div>
       <div class="truth-item">
         <div class="truth-item-label">02 &middot; Orient</div>
-        <p>Relationships update in real time—connecting what changed to the components, specs, or platforms it actually affects.</p>
+        <p>Relationships update in real time, connecting what changed to the components, specs, or platforms it actually affects.</p>
       </div>
       <div class="truth-item">
         <div class="truth-item-label">03 &middot; Decide</div>
@@ -399,7 +399,7 @@
   <div class="principles-inner">
     <div class="section-label">// Architecture Defaults</div>
     <h2>Hard invariants, handled up front.</h2>
-    <p class="eco-lede">A good substrate makes your application code smaller by settling concurrency, identity, and recovery rules once—so product repositories spend their lines on domain work instead of plumbing.</p>
+    <p class="eco-lede">A good substrate makes your application code smaller by settling concurrency, identity, and recovery rules once. Product repositories spend their lines on domain work instead of plumbing.</p>
     <div class="principles-grid">
       <div class="principle">
         <div class="principle-icon">[01] Write Authority</div>
@@ -419,7 +419,7 @@
       <div class="principle">
         <div class="principle-icon">[04] Bounded Execution</div>
         <h3>References over payloads</h3>
-        <p>Rules trigger components with iteration caps, explicit budgets, and storage references—keeping multi-step agent loops inspectable and context windows lean.</p>
+        <p>Rules trigger components with iteration caps, explicit budgets, and storage references, keeping multi-step agent loops inspectable and context windows lean.</p>
       </div>
     </div>
   </div>
@@ -434,7 +434,7 @@
       <div class="proof-card">
         <div class="proof-stat"><span>137</span> / 137</div>
         <h3>External OGC Conformance</h3>
-        <p><strong>SemConnect</strong> passes all 137 checks in the official OGC API Connected Systems test suite—an external standard we neither wrote nor grade.</p>
+        <p><strong>SemConnect</strong> passes all 137 checks in the official OGC API Connected Systems test suite, an external standard we neither wrote nor grade.</p>
       </div>
       <div class="proof-card">
         <div class="proof-stat"><span>NEAR</span></div>
@@ -460,7 +460,7 @@
       <div class="roadmap-step">
         <div class="step-num">Step 01 &middot; Active Now</div>
         <h3>SemEngine MVP</h3>
-        <p>Landing the clean, standalone semantic knowledge graph core that succeeds SemStreams—paired with optional SemVocab, SemEmbed, and SemSparql edges.</p>
+        <p>Landing the clean, standalone semantic knowledge graph core that succeeds SemStreams, paired with optional SemVocab, SemEmbed, and SemSparql edges.</p>
       </div>
       <div class="roadmap-step">
         <div class="step-num">Step 02 &middot; Next Up</div>
@@ -478,7 +478,7 @@
       <a href="projects.html" class="btn-primary">Browse Production &amp; Labs &#8594;</a>
       <a href="https://github.com/C360Studio" target="_blank" rel="noopener" class="btn-ghost">C360Studio on GitHub &#8599;</a>
     </div>
-    <p class="alpha-note">MIT-licensed Go repositories (CC-BY-4.0 for HAAG). Pre-1.0 software—expect active iteration as the SemEngine cutover completes.</p>
+    <p class="alpha-note">MIT-licensed Go repositories (CC-BY-4.0 for HAAG). Pre-1.0 software; expect active iteration as the SemEngine cutover completes.</p>
   </div>
 </section>
 

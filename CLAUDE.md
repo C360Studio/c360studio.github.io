@@ -43,4 +43,5 @@ All styles live in `styles.css`, using CSS custom properties in `:root`:
 
 - Nav and footer markup are shared across `index.html` and `projects.html` and must be kept in sync manually
 - Keep CSS rules in `styles.css` rather than inline styles
-- Tone: pragmatic, capability-forward systems engineering prose — concrete and verifiable without marketing fluff or defensiveness
+- Tone: pragmatic, capability-forward systems engineering prose, concrete and verifiable without marketing fluff or defensiveness
+- No em-dashes in site prose (rebuild sentences cleanly instead; reserve em-dashes only for structural separators like `<title>` and the footer wordmark)
